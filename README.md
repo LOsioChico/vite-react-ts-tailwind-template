@@ -50,6 +50,7 @@ This template has been configured with all of the tools required to create a **R
 
 - [✅] Add `.gitkeep` files to empty directories to keep them in the repo
 - [✅] Add `React Router` for client-side routing
+- [⚒️] Add script to remove `.gitkeep` files
 - [⚒️] Add script to add new features like `Vitest`, `Zustand`, `React Icons`, etc.
 - [🔜] Add `Vitest` for testing
 - [🔜] Add `Zustand` for state management
