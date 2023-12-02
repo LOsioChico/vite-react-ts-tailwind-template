@@ -46,6 +46,12 @@ This template has been configured with all of the tools required to create a **R
 ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
 ![Prettier](https://img.shields.io/badge/prettier-F8BC45?style=for-the-badge&logo=prettier&logoColor=black)
 
+## TODO
+
+- [✅] Add `.gitkeep` files to empty directories to keep them in the repo
+- [🔜] Add `Vitest` for testing
+- [🔜] Add `React Icons` for icons
+
 ## Contributing
 
 Feel free to [open an issue](https://github.com/LOsioChico/vite-react-ts-tailwind-template/issues/new) or create a PR if you'd like to contribute 🙌
