@@ -1,6 +1,10 @@
 {
-  "addTemplateConfigFiles": true,
-  "deleteGitkeepFiles": false,
-  "deleteConfigFolder": false,
-  "commitChanges": false
+  "preinstall": {
+    "addTemplateConfigFiles": true,
+    "deleteGitkeepFiles": false
+  },
+  "postinstall": {
+    "deleteConfigFolder": false,
+    "commitChanges": false
+  }
 }
