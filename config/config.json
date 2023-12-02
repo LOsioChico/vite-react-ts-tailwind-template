@@ -1,7 +1,7 @@
 {
   "preinstall": {
-    "addTemplateConfigFiles": true,
-    "deleteGitkeepFiles": false
+    "addTemplateConfigFiles": false,
+    "deleteGitkeepFiles": true
   },
   "postinstall": {
     "deleteConfigFolder": false,
