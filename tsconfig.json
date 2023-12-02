@@ -23,7 +23,8 @@
     "noFallthroughCasesInSwitch": true,
     /* Types */
     "types": [
-      "vite/client"
+      "vite/client",
+      "@types/node"
     ],
     /* Alias */
     "baseUrl": ".",
@@ -39,7 +40,8 @@
     "tsconfig.node.json",
     "tsconfig.json",
     "tailwind.config.js",
-    "postcss.config.js"
+    "postcss.config.js",
+    "config"
   ],
   "references": [
     {
