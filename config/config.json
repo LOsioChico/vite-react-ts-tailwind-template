@@ -1,0 +1,6 @@
+{
+  "addTemplateConfigFiles": true,
+  "deleteGitkeepFiles": false,
+  "deleteConfigFolder": false,
+  "commitChanges": false
+}
