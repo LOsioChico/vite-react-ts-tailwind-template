@@ -1,0 +1,8 @@
+{
+  "testing": {
+    "vitest": false
+  },
+  "stateManagement": {
+    "zustand": false
+  }
+}
