@@ -20,9 +20,11 @@ This template has been configured with all of the tools required to create a **R
 ### Setup
 
 1. `git clone https://github.com/LOsioChico/vite-react-ts-tailwind-template.git`
-2. Run `pnpm install` to install all of the project's dependencies
-3. Build the project for production: `pnpm build`
-4. Run the local development server: `pnpm dev`
+2. Modify the `package.json` file to use your project name, description, etc.
+3. Modify the `config/features.json` file to add the features you want to use
+4. Run `pnpm install` to install all of the project's dependencies
+5. Build the project for production: `pnpm build`
+6. Run the local development server: `pnpm dev`
 
 ### Dev Loop
 
@@ -31,6 +33,7 @@ This template has been configured with all of the tools required to create a **R
 - `preview` - locally preview the production build
 - `lint` - run the linter
 - `format` - run the code formatter
+- `pnpm:devPreinstall` - this run automatically by pnpm before install, no need to run manually. It will remove the .gitkeep files from the empty directories and add the features with the config in `config/features.json`
 
 ## Features
 
