@@ -16,6 +16,7 @@ const logFeaturesStatus = () => {
     fs.readFileSync('./config/features.json', 'utf8'),
   ) as Features;
 
+  console.log('\n');
   console.log('*'.repeat(50));
   console.log(`${colors.bold}Current features status:${colors.reset}`);
   console.log('*'.repeat(50));
@@ -30,6 +31,7 @@ const logFeaturesStatus = () => {
     });
   });
   console.log('\n' + '*'.repeat(50));
+  console.log('\n');
 };
 
 export default logFeaturesStatus;
