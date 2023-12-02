@@ -1,0 +1,5 @@
+import '@/styles/index.css';
+import ReactDOM from 'react-dom/client';
+import AppRoutes from './routes/index.tsx';
+
+ReactDOM.createRoot(document.getElementById('root')!).render(<AppRoutes />);
