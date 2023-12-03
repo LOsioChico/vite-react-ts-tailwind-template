@@ -5,10 +5,9 @@ const cleanProyect = async () => {
   // remove dependencies
   exec('pnpm remove @types/node');
 
-  // delete the preinstall and postinstall scripts from package.json
+  // delete postinstall scripts from package.json
   const packageJson = JSON.parse(await fs.readFile('./package.json', 'utf-8'));
 
-  delete packageJson.scripts['pnpm:devPreinstall'];
   delete packageJson.scripts.postinstall;
 
   await fs.writeFile(

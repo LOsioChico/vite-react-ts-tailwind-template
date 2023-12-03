@@ -3,11 +3,14 @@ import { exec } from 'child_process';
 import deleteGitKeepFilesInSrc from './deleteGitkeepFiles.ts';
 import addConfigFiles from './addConfigFiles.ts';
 import addFeatures from './addFeatures.ts';
+import logFeaturesStatus from 'config/utils/logFeaturesStatus.ts';
 // import cleanProyect from 'config/utils/cleanProyect.ts';
 
 const config = JSON.parse(fs.readFileSync('./config/config.json', 'utf-8'));
 
 void (async () => {
+  await logFeaturesStatus();
+
   // add features to package.json and files to src if enabled in config/features.json
   await addFeatures();
 
@@ -24,7 +27,7 @@ void (async () => {
     // commit changes
     exec('git add .');
     exec(
-      'git commit -m "feat: add features and config files, delete config folder and preinstall script"',
+      'git commit -m "feat: add features and config files, delete config folder"',
     );
     // exec('git push');
   }

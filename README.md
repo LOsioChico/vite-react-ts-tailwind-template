@@ -33,8 +33,7 @@ This template has been configured with all of the tools required to create a **R
 - `preview` - locally preview the production build
 - `lint` - run the linter
 - `format` - run the code formatter
-- `pnpm:devPreinstall` - this run automatically by pnpm before install, no need to run manually. It will add the features with the config in `config/features.json` file and can be configured in `config/config.json` file
-- `postinstall` - this run automatically by pnpm after install, no need to run manually. It can be configured in `config/config.json` file
+- `postinstall` - this run automatically by pnpm after install, no need to run manually. It will add the features with the config in `config/features.json` file and can be configured in `config/config.json` file
 
 ## Features
 
@@ -66,7 +65,7 @@ This template has been configured with all of the tools required to create a **R
 - [✅] Add script to add new features like `Vitest`, `Zustand`, `React Icons`, etc.
 - [✅] Add `Zustand` for state management
 - [✅] Add `config/features.json` file to add features to the project
-- [✅] Add `config/config.json` file to configure the project preinstall script
+- [✅] Add `config/config.json` file to configure the project postinstall script
 - [⚒️] Add `@clack/prompts` for interactive CLI, to add features to the project and configure the project postinstall script
 - [🔜] Add `React Icons` for icons
 - [🔜] Add `Vitest` for testing
