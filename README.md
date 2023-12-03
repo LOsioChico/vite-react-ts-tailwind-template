@@ -43,7 +43,7 @@ This template has been configured with all of the tools required to create a **R
 - 💄 [Prettier](https://prettier.io) - Code formatter
 - 🚀 [React Router](https://reactrouter.com) - Client-side routing
 
-## Optional Features
+## Additional Features
 
 - 📦 [Zustand](https://zustand-demo.pmnd.rs/) - Effortless state management for React
 
