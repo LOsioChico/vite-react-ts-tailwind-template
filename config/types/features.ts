@@ -1,10 +1,5 @@
-import type Feature from './feature';
-import type FeatureCategories from './featureCategory';
+import type features from '../features.json';
 
-type Features = {
-  [key in FeatureCategories]: {
-    [key in Feature]: boolean;
-  };
-};
+type Features = typeof features;
 
 export default Features;
