@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx",
     "format": "prettier --config .prettierrc --write src/**/*.ts src/**/*.tsx spec/**/*.ts",
-    "pnpm:devPreinstall": "npx ts-node --esm config/scripts/preInstall.ts",
+    "pnpm:devPreinstall": "npx ts-node --transpile-only --esm config/scripts/preInstall.ts",
     "postinstall": "npx ts-node --esm config/scripts/postInstall.ts"
   },
   "dependencies": {
