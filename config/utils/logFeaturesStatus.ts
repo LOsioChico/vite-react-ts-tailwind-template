@@ -1,5 +1,5 @@
-import fs from 'fs/promises'
-import Features from 'config/types/features';
+import fs from 'fs/promises';
+import type Features from 'config/types/features';
 
 const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
@@ -11,11 +11,11 @@ const colors = {
   red: '\x1b[91m',
 };
 
-const logFeaturesStatus = async () => { 
+const logFeaturesStatus = async () => {
   const features = JSON.parse(
     await fs.readFile('./config/features.json', 'utf8'),
-  ) as Features
-  
+  ) as Features;
+
   console.log('\n');
   console.log('*'.repeat(50));
   console.log(`${colors.bold}Current features status:${colors.reset}`);
