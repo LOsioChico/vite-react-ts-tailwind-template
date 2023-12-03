@@ -1,7 +1,6 @@
 import fs from 'fs/promises';
 import type Features from 'config/types/features';
-
-const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+import capitalize from './capitalize';
 
 const colors = {
   reset: '\x1b[0m',
