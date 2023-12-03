@@ -9,7 +9,8 @@ void (async () => {
     fs.rmSync('./config', { recursive: true });
 
     const packageJson = JSON.parse(fs.readFileSync('./package.json', 'utf-8'));
-    delete packageJson.scripts['pnpm:devPreinstall'];
+    delete packageJson.scripts.preinstall;
+    delete packageJson.scripts.postinstall;
     fs.writeFileSync(
       './package.json',
       JSON.stringify(packageJson, null, 2) + '\n',
