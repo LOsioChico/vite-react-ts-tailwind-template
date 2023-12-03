@@ -3,8 +3,8 @@ import { exec } from 'child_process';
 import deleteGitKeepFilesInSrc from './deleteGitkeepFiles.ts';
 import addConfigFiles from './addConfigFiles.ts';
 import addFeatures from './addFeatures.ts';
-import logFeaturesStatus from 'config/utils/logFeaturesStatus.ts';
-// import cleanProyect from 'config/utils/cleanProyect.ts';
+import logFeaturesStatus from '../utils/logFeaturesStatus.ts';
+// import cleanProyect from '../utils/cleanProyect.ts';
 
 const config = JSON.parse(fs.readFileSync('./config/config.json', 'utf-8'));
 
