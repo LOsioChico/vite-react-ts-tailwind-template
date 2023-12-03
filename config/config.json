@@ -5,6 +5,7 @@
   },
   "postinstall": {
     "deleteConfigFolder": false,
-    "commitChanges": false
+    "commitChanges": false,
+    "cleanPackageJson": false
   }
 }
