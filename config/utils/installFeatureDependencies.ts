@@ -1,7 +1,7 @@
 import type Feature from 'config/types/feature';
 import addDependencies from './addDependencies.ts';
 
-const installFeatureDependencies = (feature: Feature) => {
+const installFeatureDependencies = async (feature: Feature) => {
   console.log(`Adding ${feature} dependencies...`);
 
   const dependencies = [];
@@ -18,8 +18,8 @@ const installFeatureDependencies = (feature: Feature) => {
       break;
   }
 
-  addDependencies(dependencies);
-  addDependencies(devDependencies, { dev: true });
+  await addDependencies(dependencies);
+  await addDependencies(devDependencies, { dev: true });
 };
 
 export default installFeatureDependencies;

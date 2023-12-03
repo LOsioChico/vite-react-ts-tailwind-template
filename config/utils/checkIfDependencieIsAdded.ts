@@ -1,7 +1,8 @@
-import fs from 'fs';
+import fs from 'fs/promises';
 
-const checkIfDependencieIsAdded = (dependencie: string) => {
-  const packageJson = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
+const checkIfDependencieIsAdded = async (dependencie: string) => {
+  const packageJson = JSON.parse(await fs.readFile('./package.json', 'utf8'));
+
   const dependencieExist =
     packageJson.dependencies[dependencie] ||
     packageJson.devDependencies[dependencie];

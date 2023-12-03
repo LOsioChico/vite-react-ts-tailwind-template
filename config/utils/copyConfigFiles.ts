@@ -1,9 +1,10 @@
-import fs from 'fs';
+// import fs from 'fs';
+import fs from 'fs/promises';
 import path from 'path';
 import type Feature from '../types/feature';
 import configFiles from '../constants/configFiles.ts';
 
-const copyConfigfiles = (feature: Feature) => {
+const copyConfigfiles = async (feature: Feature) => {
   console.log(`Adding ${feature} config files...`);
 
   const { files } = configFiles[feature];
@@ -15,8 +16,8 @@ const copyConfigfiles = (feature: Feature) => {
 
     const outputDir = path.dirname(output);
     // add folder if it doesn't exist
-    fs.mkdirSync(outputDir, { recursive: true });
-    fs.copyFileSync(input, output);
+    void fs.mkdir(outputDir, { recursive: true });
+    void fs.copyFile(input, output);
 
     console.log(`Added ${name}!`);
   });

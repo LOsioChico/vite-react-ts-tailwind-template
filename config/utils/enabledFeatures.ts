@@ -1,11 +1,11 @@
-import fs from 'fs';
+import fs from 'fs/promises';
 import type Features from 'config/types/features';
 import type FeatureCategories from 'config/types/featureCategory';
 import type Feature from 'config/types/feature';
 
-const enabledFeatures = () => {
+const enabledFeatures = async () => {
   const features = JSON.parse(
-    fs.readFileSync('./config/features.json', 'utf8'),
+    await fs.readFile('./config/features.json', 'utf8'),
   ) as Features;
 
   const enabledFeaturesResult: Feature[] = [];
