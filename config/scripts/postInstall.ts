@@ -14,12 +14,14 @@ void (async () => {
 
     delete packageJson.scripts.preinstall;
     delete packageJson.scripts.postinstall;
-    delete packageJson.devDependencies['@types/node'];
 
     fs.writeFileSync(
       './package.json',
       JSON.stringify(packageJson, null, 2) + '\n',
     );
+
+    // remove dependencies
+    exec('pnpm remove @types/node');
   }
 
   if (config.postinstall.commitChanges) {
