@@ -44,6 +44,10 @@ This template has been configured with all of the tools required to create a **R
 - 💄 [Prettier](https://prettier.io) - Code formatter
 - 🚀 [React Router](https://reactrouter.com) - Client-side routing
 
+## Optional Features
+
+- 📦 [Zustand](https://zustand-demo.pmnd.rs/) - Effortless state management for React
+
 ## Recommended IDE Setup
 
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
@@ -52,12 +56,18 @@ This template has been configured with all of the tools required to create a **R
 
 ## TODO
 
+    [✅] - Completed
+    [⚒️] - In Progress
+    [🔜] - Planned
+
 - [✅] Add `.gitkeep` files to empty directories to keep them in the repo
 - [✅] Add `React Router` for client-side routing
 - [✅] Add script to remove `.gitkeep` files
 - [✅] Add script to add new features like `Vitest`, `Zustand`, `React Icons`, etc.
 - [✅] Add `Zustand` for state management
-- [🔜] Add `config/config.json` file to configure the project preinstall script
+- [✅] Add `config/features.json` file to add features to the project
+- [✅] Add `config/config.json` file to configure the project preinstall script
+- [⚒️] Add `@clack/prompts` for interactive CLI, to add features to the project and configure the project postinstall script
 - [🔜] Add `React Icons` for icons
 - [🔜] Add `Vitest` for testing
 
