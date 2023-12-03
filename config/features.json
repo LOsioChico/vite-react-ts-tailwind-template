@@ -1,8 +1,4 @@
 {
-  "testing": {
-    "vitest": false
-  },
-  "stateManagement": {
-    "zustand": false
-  }
+  "vitest": false,
+  "zustand": false
 }
