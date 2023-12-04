@@ -13,6 +13,7 @@ const configJson = JSON.parse(
   await fs.readFile('./config/config.json', { encoding: 'utf-8' }),
 );
 
+
 void (async () => {
   clack.intro(
     '\x1b[46m\x1b[30m' + ' Configure the initial proyect ' + '\x1b[0m',
@@ -44,21 +45,17 @@ and the package.json file will be cleaned.`);
 
   if (shouldAddAdditionalFeatures) await clackAddAdditionalFeaturesMenu();
 
+  const isAnyFeatureEnabled = Boolean((await enabledFeatures()).length);
   // add features to package.json and files to src if enabled in config/features.json
-  if ((await enabledFeatures()).length) {
-    await addFeatures();
-  }
-
+  if (isAnyFeatureEnabled) await addFeatures();
   // delete gitkeep files in src
   if (configJson.deleteGitkeepFiles) await deleteGitKeepFilesInSrc();
-
   // copy template files to src
   if (configJson.addTemplateConfigFiles) await addConfigFiles();
-
   // clean proyect
   await cleanProyect();
 
-  if (configJson.commitChanges) await commitChanges();
+  if (configJson.commitChanges) await commitChanges(isAnyFeatureEnabled);
 
   clack.outro('✔ Proyect configured successfully.');
 })().catch((error) => {
