@@ -6,9 +6,9 @@ const commitChanges = async (isAnyFeatureEnabled: boolean) => {
   const spinner = clack.spinner();
   spinner.start(`Commiting changes...`);
 
-  if (await isGitRepository() === false) {
+  if (!(await isGitRepository())) {
     spinner.stop(`✖ Cannot commit changes. Not a git repository.`);
-    return
+    return;
   }
 
   await asyncExec(`git add .`);
@@ -18,8 +18,6 @@ const commitChanges = async (isAnyFeatureEnabled: boolean) => {
       ? `git commit -m "feat: add features and files to src, deleted config folder and cleaned proyect"`
       : `git commit -m "feat: deleted config folder and cleaned proyect"`,
   );
-
-  await asyncExec(`git push`);
 
   spinner.stop(`✔ Commited changes.`);
 };
