@@ -1,13 +1,13 @@
 import fs from 'fs/promises';
 import * as clack from '@clack/prompts';
-import { exec } from 'child_process';
 import deleteGitKeepFilesInSrc from './deleteGitkeepFiles.ts';
 import addConfigFiles from './addConfigFiles.ts';
+import commitChanges from '../utils/commitChanges.ts';
 import addFeatures from './addFeatures.ts';
 import clackConfigureMenu from '../utils/clackConfigureMenu.ts';
 import clackAddAdditionalFeaturesMenu from '../utils/clackAddAdditionalFeaturesMenu.ts';
 import enabledFeatures from '../utils/enabledFeatures.ts';
-// import cleanProyect from '../utils/cleanProyect.ts';
+import cleanProyect from '../utils/cleanProyect.ts';
 
 const configJson = JSON.parse(
   await fs.readFile('./config/config.json', { encoding: 'utf-8' }),
@@ -26,7 +26,7 @@ and the package.json file will be cleaned.`);
   });
 
   if (clack.isCancel(shouldConfigure)) {
-    clack.outro('Operation cancelled.');
+    clack.outro('✖ Operation cancelled.');
     process.exit(0);
   }
 
@@ -38,7 +38,7 @@ and the package.json file will be cleaned.`);
   });
 
   if (clack.isCancel(shouldAddAdditionalFeatures)) {
-    clack.outro('Operation cancelled.');
+    clack.outro('✖ Operation cancelled.');
     process.exit(0);
   }
 
@@ -49,9 +49,6 @@ and the package.json file will be cleaned.`);
     await addFeatures();
   }
 
-  clack.outro('Configuration completed successfully.');
-  process.exit(0);
-
   // delete gitkeep files in src
   if (configJson.deleteGitkeepFiles) await deleteGitKeepFilesInSrc();
 
@@ -59,16 +56,11 @@ and the package.json file will be cleaned.`);
   if (configJson.addTemplateConfigFiles) await addConfigFiles();
 
   // clean proyect
-  // await cleanProyect();
+  await cleanProyect();
 
-  if (configJson.commitChanges) {
-    // commit changes
-    exec('git add .');
-    exec(
-      'git commit -m "feat: add features and config files, delete config folder"',
-    );
-    // exec('git push');
-  }
+  if (configJson.commitChanges) await commitChanges();
+
+  clack.outro('✔ Proyect configured successfully.');
 })().catch((error) => {
   clack.outro(`✖ ${error.message}`);
   process.exit(1);
