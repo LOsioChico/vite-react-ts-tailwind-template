@@ -1,9 +1,10 @@
-import { exec } from 'child_process';
+import asyncExec from './asyncExec';
 import fs from 'fs/promises';
 
 const cleanProyect = async () => {
   // remove dependencies
-  exec('pnpm remove @types/node');
+  const dependenciesToRemove = ['@types/node', '@clack/prompts'];
+  await asyncExec(`pnpm remove ${dependenciesToRemove.join(' ')}`);
 
   // delete postinstall scripts from package.json
   const packageJson = JSON.parse(await fs.readFile('./package.json', 'utf-8'));
