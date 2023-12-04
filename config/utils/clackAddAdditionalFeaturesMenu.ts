@@ -21,7 +21,7 @@ const clackAddAdditionalFeaturesMenu = async () => {
     options: addAdditionalFeaturesMenu,
     required: false,
     initialValues: Object.keys(featuresJson).filter(
-      (key) => featuresJson[key as Feature] === true,
+      (key) => featuresJson[key as Feature],
     ),
   });
 

@@ -1,6 +1,6 @@
 import fs from 'fs/promises';
-import type Features from 'config/types/features';
-import type Feature from 'config/types/feature';
+import type Features from '../types/features';
+import type Feature from '../types/feature';
 
 const enabledFeatures = async () => {
   const features = JSON.parse(

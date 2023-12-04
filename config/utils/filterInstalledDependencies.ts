@@ -7,7 +7,7 @@ const filterInstalledDependencies = async (
   dependencies: string[],
   spinner: Spinner,
 ) => {
-  const dependenciesToInstall = [];
+  const dependenciesToInstall: string[] = [];
 
   for (const dependency of dependencies) {
     const dependencyName = getDependencyName(dependency);

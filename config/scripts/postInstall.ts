@@ -45,7 +45,7 @@ and the package.json file will be cleaned.`);
   if (shouldAddAdditionalFeatures) await clackAddAdditionalFeaturesMenu();
 
   const isAnyFeatureEnabled = Boolean((await enabledFeatures()).length);
-  
+
   // add features to package.json and files to src if enabled in config/features.json
   if (isAnyFeatureEnabled) await addFeatures();
   // delete gitkeep files in src

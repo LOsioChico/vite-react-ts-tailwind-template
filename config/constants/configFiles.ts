@@ -1,4 +1,4 @@
-import type Configfiles from 'config/types/configFiles';
+import type Configfiles from '../types/configFiles';
 import path from 'path';
 
 const inputBasePath = path.join(process.cwd(), 'config/templates');

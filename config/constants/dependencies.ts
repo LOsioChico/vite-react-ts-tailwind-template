@@ -1,4 +1,4 @@
-import type Dependencies from 'config/types/dependencies';
+import type Dependencies from '../types/dependencies';
 
 const dependencies: Dependencies = {
   zustand: {
