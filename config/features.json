@@ -1,4 +1,4 @@
 {
   "vitest": false,
-  "zustand": true
+  "zustand": false
 }
