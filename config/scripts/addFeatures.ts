@@ -4,9 +4,11 @@ import enabledFeatures from '../utils/enabledFeatures.ts';
 const addFeatures = async () => {
   const features = await enabledFeatures();
 
-  features.forEach((feature) => {
-    void installFeatureDependencies(feature);
-  });
+  await Promise.all(
+    features.map(async (feature) => {
+      await installFeatureDependencies(feature);
+    }),
+  );
 };
 
 export default addFeatures;
