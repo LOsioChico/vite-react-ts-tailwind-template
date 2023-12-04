@@ -21,8 +21,8 @@ This template has been configured with all of the tools required to create a **R
 
 1. `git clone https://github.com/LOsioChico/vite-react-ts-tailwind-template.git`
 2. Modify the `package.json` file to use your project name, description, etc.
-3. Modify the `config/features.json` file to add the features you want to use
-4. Run `pnpm install` to install all of the project's dependencies (**warning:** the `config` folder will be removed after this step)
+3. Run `pnpm install` to install all of the project's dependencies
+4. After the installation is complete, the `postinstall` script will run automatically with a menu to add the features you want to use and configure the project (**warning:** the `config` folder will be removed after this step)
 5. Build the project for production: `pnpm build`
 6. Run the local development server: `pnpm dev`
 
@@ -66,7 +66,8 @@ This template has been configured with all of the tools required to create a **R
 - [✅] Add `Zustand` for state management
 - [✅] Add `config/features.json` file to add features to the project
 - [✅] Add `config/config.json` file to configure the project postinstall script
-- [⚒️] Add `@clack/prompts` for interactive CLI, to add features to the project and configure the project postinstall script
+- [✅] Add `@clack/prompts` for interactive CLI, to add features to the project and configure the project postinstall script
+- [🔜] Add an CLI gif animation to the README (Example of how to initialize the project)
 - [🔜] Add `React Icons` for icons
 - [🔜] Add `Vitest` for testing
 
