@@ -33,7 +33,7 @@ This template has been configured with all of the tools required to create a **R
 - `preview` - locally preview the production build
 - `lint` - run the linter
 - `format` - run the code formatter
-- `postinstall` - this run automatically by pnpm after install, no need to run manually. It will add the features with the config in `config/features.json` file and can be configured in `config/config.json` file
+- `postinstall` - this run automatically by pnpm after install, no need to run manually
 
 ## Features
 
