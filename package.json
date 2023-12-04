@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx",
     "format": "prettier --config .prettierrc --write src/**/*.ts src/**/*.tsx spec/**/*.ts",
-    "postinstall": "npx ts-node --esm config/scripts/postInstall.ts"
+    "postinstall": "ts-node --esm config/scripts/postInstall.ts"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -39,6 +39,7 @@
     "prettier": "^3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.7",
     "tailwindcss": "^3.3.5",
+    "ts-node": "^10.9.1",
     "typescript": "*",
     "vite": "^5.0.0"
   },
