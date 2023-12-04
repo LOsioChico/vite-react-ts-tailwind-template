@@ -1,17 +1,22 @@
+import type Spinner from '../types/spinner.ts';
+import capitalize from './capitalize.ts';
 import checkIfDependencieIsAdded from './checkIfDependencieIsAdded.ts';
 import getDependencyName from './getDependencyName.ts';
 
-const filterInstalledDependencies = async (dependencies: string[]) => {
-  const dependenciesToInstall = await Promise.all(
-    dependencies.filter(async (dependency) => {
-      const dependencyName = getDependencyName(dependency);
-      const isAdded = await checkIfDependencieIsAdded(dependencyName);
+const filterInstalledDependencies = async (
+  dependencies: string[],
+  spinner: Spinner,
+) => {
+  const dependenciesToInstall = [];
 
-      if (isAdded) console.log(`${dependencyName} already added!`);
+  for (const dependency of dependencies) {
+    const dependencyName = getDependencyName(dependency);
+    const isAdded = await checkIfDependencieIsAdded(dependencyName);
 
-      return !isAdded;
-    }),
-  );
+    if (isAdded) spinner.stop(`${capitalize(dependencyName)} already added!`);
+
+    if (!isAdded) dependenciesToInstall.push(dependency);
+  }
 
   return dependenciesToInstall;
 };
