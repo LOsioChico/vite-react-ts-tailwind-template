@@ -7,7 +7,7 @@ const commitChanges = async (isAnyFeatureEnabled: boolean) => {
   spinner.start(`Commiting changes...`);
 
   if (await isGitRepository() === false) {
-    spinner.stop(`✖ Not a git repository.`);
+    spinner.stop(`✖ Cannot commit changes. Not a git repository.`);
     return
   }
 
