@@ -1,4 +1,4 @@
-import asyncExec from './asyncExec';
+import asyncExec from './asyncExec.ts';
 import fs from 'fs/promises';
 
 const cleanProyect = async () => {
