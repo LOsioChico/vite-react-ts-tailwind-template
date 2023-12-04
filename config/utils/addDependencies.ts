@@ -10,7 +10,7 @@ const addDependencies = async (
   const dependenciesToInstall = await filterInstalledDependencies(dependencies);
 
   if (dependenciesToInstall.length) {
-    installDependencies(dependenciesToInstall, { dev });
+    await installDependencies(dependenciesToInstall, { dev });
   }
 };
 
