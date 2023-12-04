@@ -16,7 +16,7 @@ const cleanProyect = async () => {
   );
 
   // delete the config folder and package.json script
-  await fs.rmdir('./config', { recursive: true });
+  await fs.rm('./config', { recursive: true });
 };
 
 export default cleanProyect;
