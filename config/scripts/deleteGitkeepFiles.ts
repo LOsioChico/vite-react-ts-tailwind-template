@@ -13,9 +13,6 @@ const deleteGitKeepFiles = async (directoryPath: string) => {
       await deleteGitKeepFiles(filePath);
     } else if (file === '.gitkeep') {
       await fs.unlink(filePath);
-      console.log(
-        `File ${file} deleted in ${directoryPath.split('\\').at(-1)}`,
-      );
     }
   }
 };
