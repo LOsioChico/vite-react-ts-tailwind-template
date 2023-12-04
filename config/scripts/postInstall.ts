@@ -9,11 +9,6 @@ import clackAddAdditionalFeaturesMenu from '../utils/clackAddAdditionalFeaturesM
 import enabledFeatures from '../utils/enabledFeatures.ts';
 import cleanProyect from '../utils/cleanProyect.ts';
 
-const configJson = JSON.parse(
-  await fs.readFile('./config/config.json', { encoding: 'utf-8' }),
-);
-
-
 void (async () => {
   clack.intro(
     '\x1b[46m\x1b[30m' + ' Configure the initial proyect ' + '\x1b[0m',
@@ -33,6 +28,10 @@ and the package.json file will be cleaned.`);
 
   if (shouldConfigure) await clackConfigureMenu();
 
+  const configJson = JSON.parse(
+    await fs.readFile('./config/config.json', { encoding: 'utf-8' }),
+  );
+
   // add additional features
   const shouldAddAdditionalFeatures = await clack.confirm({
     message: 'Do you want to add additional features?',
@@ -46,6 +45,7 @@ and the package.json file will be cleaned.`);
   if (shouldAddAdditionalFeatures) await clackAddAdditionalFeaturesMenu();
 
   const isAnyFeatureEnabled = Boolean((await enabledFeatures()).length);
+  
   // add features to package.json and files to src if enabled in config/features.json
   if (isAnyFeatureEnabled) await addFeatures();
   // delete gitkeep files in src
