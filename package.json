@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx",
     "format": "prettier --config .prettierrc --write src/**/*.ts src/**/*.tsx spec/**/*.ts",
-    "postinstall": "ts-node --esm config/scripts/postInstall.ts"
+    "postinstall": "node --no-warnings=ExperimentalWarning --loader ts-node/esm config/scripts/postInstall.ts"
   },
   "dependencies": {
     "react": "^18.2.0",
