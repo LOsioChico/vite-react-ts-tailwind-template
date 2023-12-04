@@ -26,7 +26,7 @@ const clackAddAdditionalFeaturesMenu = async () => {
   });
 
   if (clack.isCancel(featuresToAdd)) {
-    clack.outro('Operation cancelled.');
+    clack.outro('✖ Operation cancelled.');
     process.exit(0);
   }
 
