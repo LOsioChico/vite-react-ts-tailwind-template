@@ -41,8 +41,8 @@ This template has been configured with all of the tools required to create a **R
 - 📦 [Pnpm](https://pnpm.io) - Fast, disk space efficient package manager
 - ⚡️ [Vite](https://github.com/vitejs/vite) - Super fast build tool
 - 🎨 [Tailwind CSS v3](https://tailwindcss.com) - Utility-first CSS framework
-- 📏 [ESLint](https://eslint.org) - Find and fix code issues
-- 💄 [Prettier](https://prettier.io) - Code formatter
+- 🚨 [ESLint](https://eslint.org) - Find and fix code issues
+- 🖌️ [Prettier](https://prettier.io) - Code formatter
 - 🚀 [React Router](https://reactrouter.com) - Client-side routing
 
 ## Additional Features
@@ -51,9 +51,13 @@ This template has been configured with all of the tools required to create a **R
 
 ## Recommended IDE Setup
 
-![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
-![Prettier](https://img.shields.io/badge/prettier-F8BC45?style=for-the-badge&logo=prettier&logoColor=black)
+- 🔧 [VSCode](https://code.visualstudio.com) - Code editor
+- 🎨 [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) - Tailwind CSS IntelliSense
+- 🎀 [Pretty TypeScript Errors](https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors) - Make TypeScript errors prettier and human-readable in VSCode.
+- 🚨 [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - Integrates ESLint JavaScript into VS Code
+- 🖌️ [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Code formatter
+- 🚦 [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens) - Improve highlighting of errors, warnings and other language diagnostics
+- 👨‍💻 [Github Copilot](https://copilot.github.com) - AI pair programmer
 
 ## TODO
 
