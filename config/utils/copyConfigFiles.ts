@@ -3,24 +3,26 @@ import fs from 'fs/promises';
 import path from 'path';
 import type Feature from '../types/feature';
 import configFiles from '../constants/configFiles.ts';
+import * as clack from '@clack/prompts';
 
 const copyConfigfiles = async (feature: Feature) => {
-  console.log(`Adding ${feature} config files...`);
+  const spinner = clack.spinner();
+  spinner.start(`Adding ${feature} config files...`);
 
   const { files } = configFiles[feature];
 
-  files.forEach((file) => {
+  for (const file of files) {
     const { input, output, name } = file;
 
-    console.log(`Adding ${name}...`);
+    spinner.start(`Adding ${name}...`);
 
     const outputDir = path.dirname(output);
     // add folder if it doesn't exist
-    void fs.mkdir(outputDir, { recursive: true });
-    void fs.copyFile(input, output);
+    await fs.mkdir(outputDir, { recursive: true });
+    await fs.copyFile(input, output);
 
-    console.log(`Added ${name}!`);
-  });
+    spinner.stop(`Added ${name}!`);
+  }
 };
 
 export default copyConfigfiles;
