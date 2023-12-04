@@ -1,5 +1,5 @@
 {
-  "addTemplateConfigFiles": true,
+  "addConfigAndTemplatesFiles": true,
   "deleteGitkeepFiles": true,
   "commitChanges": true
 }
