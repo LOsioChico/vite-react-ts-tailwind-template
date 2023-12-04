@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import * as clack from '@clack/prompts';
 import deleteGitKeepFilesInSrc from './deleteGitkeepFiles.ts';
-import addConfigFiles from './addConfigFiles.ts';
+import addConfigAndTemplatesFiles from './addConfigAndTemplatesFiles.ts';
 import commitChanges from '../utils/commitChanges.ts';
 import addFeatures from './addFeatures.ts';
 import clackConfigureMenu from '../utils/clackConfigureMenu.ts';
@@ -50,9 +50,9 @@ and the package.json file will be cleaned.`);
   if (isAnyFeatureEnabled) await addFeatures();
   // delete gitkeep files in src
   if (configJson.deleteGitkeepFiles) await deleteGitKeepFilesInSrc();
-  // copy template files to src
-  if (configJson.addTemplateConfigFiles) await addConfigFiles();
-  // clean proyect
+  // copy config files and templates folers to src
+  if (configJson.addConfigAndTemplatesFiles) await addConfigAndTemplatesFiles();
+  // clean proyect after configuration
   await cleanProyect();
 
   if (configJson.commitChanges) await commitChanges(isAnyFeatureEnabled);
