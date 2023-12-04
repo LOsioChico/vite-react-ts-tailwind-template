@@ -5,19 +5,21 @@ import path from 'path';
 const deleteGitKeepFiles = async (directoryPath: string) => {
   const files = await fs.readdir(directoryPath);
 
-  files.map(async (file) => {
-    const filePath = path.join(directoryPath, file);
-    const fileStat = await fs.stat(filePath);
+  await Promise.all(
+    files.map(async (file) => {
+      const filePath = path.join(directoryPath, file);
+      const fileStat = await fs.stat(filePath);
 
-    if (fileStat.isDirectory()) {
-      void deleteGitKeepFiles(filePath);
-    } else if (file === '.gitkeep') {
-      await fs.unlink(filePath);
-      console.log(
-        `File ${file} deleted in ${directoryPath.split('\\').at(-1)}`,
-      );
-    }
-  });
+      if (fileStat.isDirectory()) {
+        void deleteGitKeepFiles(filePath);
+      } else if (file === '.gitkeep') {
+        await fs.unlink(filePath);
+        console.log(
+          `File ${file} deleted in ${directoryPath.split('\\').at(-1)}`,
+        );
+      }
+    }),
+  );
 };
 
 const deleteGitKeepFilesInSrc = async () => {
