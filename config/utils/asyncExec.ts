@@ -4,16 +4,20 @@ const asyncExec = async (command: string) => {
   await new Promise((resolve, reject) => {
     exec(command, (error, stdout, stderr) => {
       if (error) {
-        console.log(`Failed to execute ${command}.`);
+        if (!errorMsgExceptions.includes(command))
+          console.log(`Failed to execute ${command}.`);
         reject(error);
       }
       if (stderr) {
-        console.log(`Failed to execute ${command}.`);
+        if (!errorMsgExceptions.includes(command))
+          console.log(`Failed to execute ${command}.`);
         reject(stderr);
       }
       resolve(stdout);
     });
   });
 };
+
+const errorMsgExceptions = ['git status'];
 
 export default asyncExec;
