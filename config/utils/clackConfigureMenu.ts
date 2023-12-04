@@ -17,7 +17,7 @@ const clackConfigureMenu = async () => {
   });
 
   if (clack.isCancel(configsToChange)) {
-    clack.outro('Operation cancelled.');
+    clack.outro('✖ Operation cancelled.');
     process.exit(0);
   }
 
