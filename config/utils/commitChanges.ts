@@ -19,7 +19,7 @@ const commitChanges = async (isAnyFeatureEnabled: boolean) => {
       : `git commit -m "feat: deleted config folder and cleaned proyect"`,
   );
 
-  await asyncExec(`git push origin main`);
+  await asyncExec(`git push`);
 
   spinner.stop(`✔ Commited changes.`);
 };
