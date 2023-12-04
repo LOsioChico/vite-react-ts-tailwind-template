@@ -30,7 +30,7 @@ const deleteGitKeepFilesInSrc = async () => {
     console.error(`Directory ${directoryPath} does not exist.`);
   }
 
-  spinner.stop('Gitkeep files deleted in src.');
+  spinner.stop('✔ Gitkeep files deleted in src.');
 };
 
 export default deleteGitKeepFilesInSrc;

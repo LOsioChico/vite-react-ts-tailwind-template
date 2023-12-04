@@ -24,7 +24,7 @@ const installFeatureDependencies = async (feature: Feature) => {
   await addDependencies(dependencies, { spinner });
   await addDependencies(devDependencies, { dev: true, spinner });
 
-  spinner.stop(`Added ${feature} dependencies.`);
+  spinner.stop(`✔ Added ${feature} dependencies.`);
 };
 
 export default installFeatureDependencies;

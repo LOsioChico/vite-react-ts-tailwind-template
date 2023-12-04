@@ -21,7 +21,7 @@ const copyConfigfiles = async (feature: Feature) => {
     await fs.mkdir(outputDir, { recursive: true });
     await fs.copyFile(input, output);
 
-    spinner.stop(`Added ${name}!`);
+    spinner.stop(`✔ Added ${name}!`);
   }
 };
 

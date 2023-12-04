@@ -13,7 +13,8 @@ const filterInstalledDependencies = async (
     const dependencyName = getDependencyName(dependency);
     const isAdded = await checkIfDependencieIsAdded(dependencyName);
 
-    if (isAdded) spinner.stop(`${capitalize(dependencyName)} already added!`);
+    if (isAdded)
+      spinner.stop(`⚠️ ${capitalize(dependencyName)} already added!`);
 
     if (!isAdded) dependenciesToInstall.push(dependency);
   }
