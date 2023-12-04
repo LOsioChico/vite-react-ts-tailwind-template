@@ -1,8 +1,13 @@
 import type Feature from 'config/types/feature';
 import addDependencies from './addDependencies.ts';
+import type Spinner from '../types/spinner.ts';
+import capitalize from './capitalize.ts';
 
-const installFeatureDependencies = async (feature: Feature) => {
-  console.log(`Adding ${feature} dependencies...`);
+const installFeatureDependencies = async (
+  feature: Feature,
+  spinner: Spinner,
+) => {
+  spinner.start(`Adding ${capitalize(feature)} dependencies...`);
 
   const dependencies = [];
   const devDependencies = [];
@@ -18,8 +23,10 @@ const installFeatureDependencies = async (feature: Feature) => {
       break;
   }
 
-  await addDependencies(dependencies);
-  await addDependencies(devDependencies, { dev: true });
+  await addDependencies(dependencies, { spinner });
+  await addDependencies(devDependencies, { dev: true, spinner });
+
+  spinner.stop(`Added ${feature} dependencies.`);
 };
 
 export default installFeatureDependencies;
