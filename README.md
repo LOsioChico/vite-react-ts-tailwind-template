@@ -16,6 +16,7 @@ This template has been configured with all of the tools required to create a **R
 ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
 ![Prettier](https://img.shields.io/badge/prettier-F8BC45?style=for-the-badge&logo=prettier&logoColor=black)
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![React Router](https://img.shields.io/badge/react%20router-%23CA4245.svg?style=for-the-badge&logo=react-router&logoColor=white)
 
 ### Setup
 
@@ -37,6 +38,7 @@ This template has been configured with all of the tools required to create a **R
 
 ## Features
 
+- 📦 [Pnpm](https://pnpm.io) - Fast, disk space efficient package manager
 - ⚡️ [Vite](https://github.com/vitejs/vite) - Super fast build tool
 - 🎨 [Tailwind CSS v3](https://tailwindcss.com) - Utility-first CSS framework
 - 📏 [ESLint](https://eslint.org) - Find and fix code issues
