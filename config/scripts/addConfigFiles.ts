@@ -4,9 +4,9 @@ import enabledFeatures from '../utils/enabledFeatures.ts';
 const addConfigFiles = async () => {
   const features = await enabledFeatures();
 
-  features.forEach((feature) => {
-    void copyConfigfiles(feature);
-  });
+  for (const feature of features) {
+    await copyConfigfiles(feature);
+  }
 };
 
 export default addConfigFiles;
