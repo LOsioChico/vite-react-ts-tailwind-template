@@ -1,12 +1,10 @@
 import type Feature from 'config/types/feature';
 import addDependencies from './addDependencies.ts';
-import type Spinner from '../types/spinner.ts';
+import * as clack from '@clack/prompts';
 import capitalize from './capitalize.ts';
 
-const installFeatureDependencies = async (
-  feature: Feature,
-  spinner: Spinner,
-) => {
+const installFeatureDependencies = async (feature: Feature) => {
+  const spinner = clack.spinner();
   spinner.start(`Adding ${capitalize(feature)} dependencies...`);
 
   const dependencies = [];
