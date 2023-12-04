@@ -6,6 +6,7 @@ import addConfigFiles from './addConfigFiles.ts';
 import addFeatures from './addFeatures.ts';
 import clackConfigureMenu from '../utils/clackConfigureMenu.ts';
 import clackAddAdditionalFeaturesMenu from '../utils/clackAddAdditionalFeaturesMenu.ts';
+import enabledFeatures from '../utils/enabledFeatures.ts';
 // import cleanProyect from '../utils/cleanProyect.ts';
 
 const configJson = JSON.parse(
@@ -43,11 +44,13 @@ and the package.json file will be cleaned.`);
 
   if (shouldAddAdditionalFeatures) await clackAddAdditionalFeaturesMenu();
 
+  // add features to package.json and files to src if enabled in config/features.json
+  if ((await enabledFeatures()).length) {
+    await addFeatures();
+  }
+
   clack.outro('Configuration completed successfully.');
   process.exit(0);
-
-  // add features to package.json and files to src if enabled in config/features.json
-  await addFeatures();
 
   // delete gitkeep files in src
   if (configJson.deleteGitkeepFiles) await deleteGitKeepFilesInSrc();
