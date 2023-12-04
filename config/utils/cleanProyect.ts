@@ -3,7 +3,7 @@ import fs from 'fs/promises';
 
 const cleanProyect = async () => {
   // remove dependencies
-  const dependenciesToRemove = ['@types/node', '@clack/prompts'];
+  const dependenciesToRemove = ['@types/node', '@clack/prompts', 'ts-node'];
   await asyncExec(`pnpm remove ${dependenciesToRemove.join(' ')}`);
 
   // delete postinstall scripts from package.json
