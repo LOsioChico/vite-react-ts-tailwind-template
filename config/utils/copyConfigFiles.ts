@@ -14,7 +14,7 @@ const copyConfigfiles = async (feature: Feature) => {
   for (const file of files) {
     const { input, output, name } = file;
 
-    spinner.start(`Adding ${name}...`);
+    spinner.message(`Adding ${name}...`);
 
     const outputDir = path.dirname(output);
     // add folder if it doesn't exist
