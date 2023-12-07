@@ -8,8 +8,10 @@ const dependencies: Dependencies = {
   vitest: {
     dependencies: [],
     devDependencies: [
-      'vitest@0.34.6',
       'jsdom@23.0.1',
+      'vitest@1.0.2',
+      '@vitest/ui@1.0.2',
+      '@vitest/coverage-v8@1.0.2',
       '@testing-library/react@14.1.2',
     ],
   },
