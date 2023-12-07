@@ -41,7 +41,7 @@ const processFeatureChanges = async (feature: Feature) => {
       });
 
       await modifyTsConfig({
-        target: 'include',
+        target: 'compilerOptions',
         fieldName: 'types',
         fieldValue: 'vitest/globals',
         action: 'add',
