@@ -7,6 +7,11 @@ type Configfiles = {
       input: string;
       output: string;
     }>;
+    folders: Array<{
+      name: string;
+      input: string;
+      output: string;
+    }>;
   };
 };
 

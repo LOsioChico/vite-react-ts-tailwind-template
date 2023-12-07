@@ -6,16 +6,24 @@ const outputBasePath = path.join(process.cwd(), 'src');
 
 const configFiles: Configfiles = {
   zustand: {
-    files: [
+    files: [],
+    folders: [
       {
         name: 'zustand store template',
-        input: path.join(inputBasePath, 'zustand/zustand.ts'),
-        output: path.join(outputBasePath, 'store/zustand.ts'),
+        input: path.join(inputBasePath, 'zustand/store'),
+        output: path.join(outputBasePath, 'store'),
       },
     ],
   },
   vitest: {
     files: [],
+    folders: [
+      {
+        name: 'vitest __tests__ template',
+        input: path.join(inputBasePath, 'vitest/__tests__'),
+        output: path.join(outputBasePath, '__tests__'),
+      },
+    ],
   },
 };
 

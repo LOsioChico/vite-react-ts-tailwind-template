@@ -1,6 +1,6 @@
-import asyncExec from './asyncExec.ts';
+import asyncExec from '../utils/asyncExec.ts';
 import * as clack from '@clack/prompts';
-import isGitRepository from './isGitRepository.ts';
+import isGitRepository from '../utils/isGitRepository.ts';
 
 const commitChanges = async (isAnyFeatureEnabled: boolean) => {
   const spinner = clack.spinner();

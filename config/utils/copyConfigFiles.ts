@@ -1,4 +1,3 @@
-// import fs from 'fs';
 import fs from 'fs/promises';
 import path from 'path';
 import type Feature from '../types/feature';
@@ -11,18 +10,30 @@ const copyConfigfiles = async (feature: Feature) => {
 
   const { files } = configFiles[feature];
 
+  if (!files.length) {
+    spinner.stop(`✔ No config files to add for ${feature}.`);
+    return;
+  }
+
   for (const file of files) {
     const { input, output, name } = file;
 
     spinner.message(`Adding ${name}...`);
 
-    const outputDir = path.dirname(output);
-    // add folder if it doesn't exist
-    await fs.mkdir(outputDir, { recursive: true });
-    await fs.copyFile(input, output);
-
-    spinner.stop(`✔ Added ${name}!`);
+    try {
+      await copyFile(input, output);
+      spinner.stop(`✔ Added ${name}!`);
+    } catch (error) {
+      if (error instanceof Error)
+        spinner.stop(`❌ Error adding ${name}: ${error.message}`);
+    }
   }
+};
+
+const copyFile = async (input: string, output: string) => {
+  const outputDir = path.dirname(output);
+  await fs.mkdir(outputDir, { recursive: true });
+  await fs.copyFile(input, output);
 };
 
 export default copyConfigfiles;

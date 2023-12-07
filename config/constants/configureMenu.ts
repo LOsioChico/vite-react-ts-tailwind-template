@@ -2,8 +2,8 @@ import type Configs from '../types/configs.ts';
 
 const configureMenu: ConfigureMenu = [
   {
-    label: 'Add template config files',
-    value: 'addTemplateConfigFiles',
+    label: 'Add config files and templates folders',
+    value: 'addConfigAndTemplatesFiles',
     hint: 'Only add if you add an additional feature',
   },
   {
