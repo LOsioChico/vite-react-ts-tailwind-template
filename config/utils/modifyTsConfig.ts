@@ -11,7 +11,11 @@ const modifyTsConfig = async ({
 
   switch (action) {
     case 'add':
-      tsConfig[target][fieldName] = fieldValue;
+      if (Array.isArray(tsConfig[target][fieldName])) {
+        tsConfig[target][fieldName].push(fieldValue);
+      } else {
+        tsConfig[target][fieldName] = fieldValue;
+      }
       break;
     case 'remove':
       if (Array.isArray(tsConfig[target][fieldName])) {
