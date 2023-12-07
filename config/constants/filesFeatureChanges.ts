@@ -1,4 +1,4 @@
-import modifyPackageJson from 'config/utils/modifyPackageJson.ts';
+import modifyPackageJson from '../utils/modifyPackageJson.ts';
 import type Feature from '../types/feature.ts';
 import updateFileContent from '../utils/updateFileContent.ts';
 import modifyTsConfig from '../utils/modifyTsConfig.ts';
