@@ -1,5 +1,7 @@
 import asyncExec from './asyncExec.ts';
 import fs from 'fs/promises';
+import modifyPackageJson from './modifyPackageJson.ts';
+import modifyTsConfig from './modifyTsConfig.ts';
 
 const cleanProyect = async () => {
   // remove dependencies
@@ -7,14 +9,19 @@ const cleanProyect = async () => {
   await asyncExec(`pnpm remove ${dependenciesToRemove.join(' ')}`);
 
   // delete postinstall scripts from package.json
-  const packageJson = JSON.parse(await fs.readFile('./package.json', 'utf-8'));
+  await modifyPackageJson({
+    target: 'scripts',
+    fieldName: 'postinstall',
+    action: 'remove',
+  });
 
-  delete packageJson.scripts.postinstall;
-
-  await fs.writeFile(
-    './package.json',
-    JSON.stringify(packageJson, null, 2) + '\n',
-  );
+  // delete the @types/node type from tsconfig
+  await modifyTsConfig({
+    target: 'compilerOptions',
+    fieldName: 'types',
+    fieldValue: '@types/node',
+    action: 'remove',
+  });
 
   // delete the config folder and package.json script
   await fs.rm('./config', { recursive: true });
