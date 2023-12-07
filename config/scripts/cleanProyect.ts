@@ -1,7 +1,7 @@
-import asyncExec from './asyncExec.ts';
+import asyncExec from '../utils/asyncExec.ts';
 import fs from 'fs/promises';
-import modifyPackageJson from './modifyPackageJson.ts';
-import modifyTsConfig from './modifyTsConfig.ts';
+import modifyPackageJson from '../utils/modifyPackageJson.ts';
+import modifyTsConfig from '../utils/modifyTsConfig.ts';
 
 const cleanProyect = async () => {
   // remove dependencies
