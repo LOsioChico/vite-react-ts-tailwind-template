@@ -48,10 +48,10 @@ and the package.json file will be cleaned.`);
 
   // add features to package.json and files to src if enabled in config/features.json
   if (isAnyFeatureEnabled) await addFeatures();
-  // delete gitkeep files in src
-  if (configJson.deleteGitkeepFiles) await deleteGitKeepFilesInSrc();
   // copy config files and templates folers to src
   if (configJson.addConfigAndTemplatesFiles) await addConfigAndTemplatesFiles();
+  // delete gitkeep files in src
+  if (configJson.deleteGitkeepFiles) await deleteGitKeepFilesInSrc();
   // clean proyect after configuration
   await cleanProyect();
 
