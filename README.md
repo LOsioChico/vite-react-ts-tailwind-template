@@ -36,6 +36,15 @@ This template has been configured with all of the tools required to create a **R
 - `format` - run the code formatter
 - `postinstall` - this run automatically by pnpm after install, no need to run manually
 
+<!-- Dev loop with opcional features -->
+
+### Dev Loop with optional features
+
+     Vitest
+
+- `test` - run the tests with Vitest
+- `test:ui` - run the tests with Vitest UI and Coverage
+
 ## Features
 
 - 📦 [Pnpm](https://pnpm.io) - Fast, disk space efficient package manager
@@ -48,6 +57,7 @@ This template has been configured with all of the tools required to create a **R
 ## Additional Features
 
 - 📦 [Zustand](https://zustand-demo.pmnd.rs/) - Effortless state management for React
+- 🧪 [Vitest](https://vitest.dev/) - Next Generation Testing Framework
 
 ## Recommended IDE Setup
 
@@ -73,9 +83,9 @@ This template has been configured with all of the tools required to create a **R
 - [✅] Add `config/features.json` file to add features to the project
 - [✅] Add `config/config.json` file to configure the project postinstall script
 - [✅] Add `@clack/prompts` for interactive CLI, to add features to the project and configure the project postinstall script
-- [🔜] Add an CLI gif animation to the README (Example of how to initialize the project)
+- [✅] Add `Vitest` for testing
 - [🔜] Add `React Icons` for icons
-- [🔜] Add `Vitest` for testing
+- [🔜] Add an CLI gif animation to the README (Example of how to initialize the project)
 
 ## Contributing
 
