@@ -1,7 +1,7 @@
 import copyTemplatesFolders from '../utils/copyTemplatesFolders.ts';
 import copyConfigfiles from '../utils/copyConfigFiles.ts';
 import enabledFeatures from '../utils/enabledFeatures.ts';
-import processFeatureChange from '../utils/processFeatureChanges.ts';
+import processFeatureChange from './processFeatureChanges.ts';
 import * as clack from '@clack/prompts';
 
 const addConfigAndTemplatesFiles = async () => {
