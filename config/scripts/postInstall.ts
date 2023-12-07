@@ -2,12 +2,12 @@ import fs from 'fs/promises';
 import * as clack from '@clack/prompts';
 import deleteGitKeepFilesInSrc from './deleteGitkeepFiles.ts';
 import addConfigAndTemplatesFiles from './addConfigAndTemplatesFiles.ts';
-import commitChanges from '../utils/commitChanges.ts';
+import commitChanges from './commitChanges.ts';
 import addFeatures from './addFeatures.ts';
 import clackConfigureMenu from '../utils/clackConfigureMenu.ts';
 import clackAddAdditionalFeaturesMenu from '../utils/clackAddAdditionalFeaturesMenu.ts';
 import enabledFeatures from '../utils/enabledFeatures.ts';
-import cleanProyect from '../utils/cleanProyect.ts';
+import cleanProyect from './cleanProyect.ts';
 
 void (async () => {
   clack.intro(

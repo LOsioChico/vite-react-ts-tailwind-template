@@ -15,13 +15,7 @@ const addConfigAndTemplatesFiles = async () => {
 
   for (const feature of features) {
     await copyConfigfiles(feature);
-  }
-
-  for (const feature of features) {
     await copyTemplatesFolders(feature);
-  }
-
-  for (const feature of features) {
     await processFeatureChange(feature);
   }
 };
