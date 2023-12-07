@@ -17,7 +17,13 @@ const configFiles: Configfiles = {
   },
   vitest: {
     files: [],
-    folders: [],
+    folders: [
+      {
+        name: 'vitest __tests__ template',
+        input: path.join(inputBasePath, 'vitest/__tests__'),
+        output: path.join(outputBasePath, '__tests__'),
+      },
+    ],
   },
 };
 
