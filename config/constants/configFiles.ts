@@ -25,6 +25,14 @@ const configFiles: Configfiles = {
       },
     ],
   },
+  reactIcons: {
+    files: [],
+    folders: [],
+  },
+  framerMotion: {
+    files: [],
+    folders: [],
+  },
 };
 
 export default configFiles;
