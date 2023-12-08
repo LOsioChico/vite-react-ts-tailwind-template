@@ -14,7 +14,7 @@ const addAdditionalFeaturesMenu: AddAdditionalFeaturesMenu = [
   {
     value: 'reactIcons',
     label: 'React Icons',
-    hint: 'Include popular icons in your React projects easily with react-icons',
+    hint: 'Include popular icons in your React projects easily',
   },
 ];
 
