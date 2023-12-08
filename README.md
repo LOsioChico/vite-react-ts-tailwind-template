@@ -36,8 +36,6 @@ This template has been configured with all of the tools required to create a **R
 - `format` - run the code formatter
 - `postinstall` - this run automatically by pnpm after install, no need to run manually
 
-<!-- Dev loop with opcional features -->
-
 ### Dev Loop with optional features
 
      Vitest
@@ -48,6 +46,7 @@ This template has been configured with all of the tools required to create a **R
 ## Features
 
 - 📦 [Pnpm](https://pnpm.io) - Fast, disk space efficient package manager
+- ⚛️ [React](https://reactjs.org) - A JavaScript library for building user interfaces
 - ⚡️ [Vite](https://github.com/vitejs/vite) - Super fast build tool
 - 🎨 [Tailwind CSS v3](https://tailwindcss.com) - Utility-first CSS framework
 - 🚨 [ESLint](https://eslint.org) - Find and fix code issues
@@ -58,6 +57,7 @@ This template has been configured with all of the tools required to create a **R
 
 - 📦 [Zustand](https://zustand-demo.pmnd.rs/) - Effortless state management for React
 - 🧪 [Vitest](https://vitest.dev/) - Next Generation Testing Framework
+- 🖼️ [React Icons](https://react-icons.github.io/react-icons/) - Include popular icons in your React projects easily
 
 ## Recommended IDE Setup
 
