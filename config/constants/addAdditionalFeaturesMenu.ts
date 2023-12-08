@@ -16,6 +16,11 @@ const addAdditionalFeaturesMenu: AddAdditionalFeaturesMenu = [
     label: 'React Icons',
     hint: 'Include popular icons in your React projects easily',
   },
+  {
+    value: 'framerMotion',
+    label: 'Framer Motion',
+    hint: 'A production-ready motion library for React',
+  },
 ];
 
 type AddAdditionalFeaturesMenu = Array<{

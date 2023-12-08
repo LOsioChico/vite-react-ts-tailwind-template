@@ -78,12 +78,10 @@ const filesFeatureChanges: FilesFeatureChanges = {
     // Format vite.config.ts
     await asyncExec('prettier --config ./.prettierrc --write vite.config.ts');
   },
-  zustand: async () => {},
-  reactIcons: async () => {},
 };
 
-type FilesFeatureChanges = {
+type FilesFeatureChanges = Partial<{
   [key in Feature]: () => Promise<void>;
-};
+}>;
 
 export default filesFeatureChanges;

@@ -58,6 +58,7 @@ This template has been configured with all of the tools required to create a **R
 - 📦 [Zustand](https://zustand-demo.pmnd.rs/) - Effortless state management for React
 - 🧪 [Vitest](https://vitest.dev/) - Next Generation Testing Framework
 - 🖼️ [React Icons](https://react-icons.github.io/react-icons/) - Include popular icons in your React projects easily
+- 🎬 [Framer Motion](https://www.framer.com/motion/) - A production-ready motion library for React
 
 ## Recommended IDE Setup
 
@@ -85,6 +86,7 @@ This template has been configured with all of the tools required to create a **R
 - [✅] Add `@clack/prompts` for interactive CLI, to add features to the project and configure the project postinstall script
 - [✅] Add `Vitest` for testing
 - [✅] Add `React Icons` for icons
+- [✅] Add `Framer Motion` for animations
 - [🔜] Add an CLI gif animation to the README (Example of how to initialize the project)
 
 ## Contributing

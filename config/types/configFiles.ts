@@ -1,6 +1,6 @@
 import type Feature from './feature';
 
-type Configfiles = {
+type Configfiles = Partial<{
   [key in Feature]: {
     files: Array<{
       name: string;
@@ -13,6 +13,6 @@ type Configfiles = {
       output: string;
     }>;
   };
-};
+}>;
 
 export default Configfiles;

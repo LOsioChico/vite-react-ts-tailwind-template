@@ -1,5 +1,6 @@
 {
   "vitest": false,
   "zustand": false,
-  "reactIcons": false
+  "reactIcons": false,
+  "framerMotion": false
 }

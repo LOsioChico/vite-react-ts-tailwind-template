@@ -19,6 +19,10 @@ const dependencies: Dependencies = {
     dependencies: ['react-icons@4.12.0'],
     devDependencies: [],
   },
+  framerMotion: {
+    dependencies: ['framer-motion@10.16.15'],
+    devDependencies: [],
+  },
 };
 
 export default dependencies;
