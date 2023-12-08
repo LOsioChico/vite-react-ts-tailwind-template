@@ -25,6 +25,10 @@ const configFiles: Configfiles = {
       },
     ],
   },
+  reactIcons: {
+    files: [],
+    folders: [],
+  },
 };
 
 export default configFiles;

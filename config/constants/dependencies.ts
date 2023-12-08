@@ -15,6 +15,10 @@ const dependencies: Dependencies = {
       '@testing-library/react@14.1.2',
     ],
   },
+  reactIcons: {
+    dependencies: ['react-icons@4.12.0'],
+    devDependencies: [],
+  },
 };
 
 export default dependencies;

@@ -11,6 +11,11 @@ const addAdditionalFeaturesMenu: AddAdditionalFeaturesMenu = [
     label: 'Vitest',
     hint: 'A simple and fast test runner',
   },
+  {
+    value: 'reactIcons',
+    label: 'React Icons',
+    hint: 'Include popular icons in your React projects easily with react-icons',
+  },
 ];
 
 type AddAdditionalFeaturesMenu = Array<{

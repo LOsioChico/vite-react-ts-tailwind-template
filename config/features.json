@@ -1,4 +1,5 @@
 {
   "vitest": false,
-  "zustand": false
+  "zustand": false,
+  "reactIcons": false,
 }

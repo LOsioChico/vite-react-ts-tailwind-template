@@ -79,6 +79,7 @@ const filesFeatureChanges: FilesFeatureChanges = {
     await asyncExec('prettier --config ./.prettierrc --write vite.config.ts');
   },
   zustand: async () => {},
+  reactIcons: async () => {},
 };
 
 type FilesFeatureChanges = {
