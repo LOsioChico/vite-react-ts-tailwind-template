@@ -84,7 +84,7 @@ This template has been configured with all of the tools required to create a **R
 - [✅] Add `config/config.json` file to configure the project postinstall script
 - [✅] Add `@clack/prompts` for interactive CLI, to add features to the project and configure the project postinstall script
 - [✅] Add `Vitest` for testing
-- [🔜] Add `React Icons` for icons
+- [✅] Add `React Icons` for icons
 - [🔜] Add an CLI gif animation to the README (Example of how to initialize the project)
 
 ## Contributing
