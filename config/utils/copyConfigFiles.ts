@@ -3,15 +3,16 @@ import path from 'path';
 import type Feature from '../types/feature';
 import configFiles from '../constants/configFiles.ts';
 import * as clack from '@clack/prompts';
+import camelCaseToWords from './camelCaseToWords.ts';
 
 const copyConfigfiles = async (feature: Feature) => {
   const spinner = clack.spinner();
-  spinner.start(`Adding ${feature} config files...`);
+  spinner.start(`Adding ${camelCaseToWords(feature)} config files...`);
 
   const { files } = configFiles[feature];
 
   if (!files.length) {
-    spinner.stop(`✔ No config files to add for ${feature}.`);
+    spinner.stop(`✔ No config files to add for ${camelCaseToWords(feature)}.`);
     return;
   }
 
