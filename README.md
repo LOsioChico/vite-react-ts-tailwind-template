@@ -93,7 +93,7 @@ This template has been configured with all of the tools required to create a **R
 - [✅] Add `React Icons` for icons
 - [✅] Add `Framer Motion` for animations
 - [✅] Add `Supabase` for backend
-- [🔜] Add `React Query` for data fetching
+- [✅] Add `React Query` for data fetching
 - [🔜] Add an CLI gif animation to the README (Example of how to initialize the project)
 - [🔜] Add folder structure to the README with variations of additional features
 
