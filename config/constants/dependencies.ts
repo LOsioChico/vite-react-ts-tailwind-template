@@ -23,6 +23,10 @@ const dependencies: Dependencies = {
     dependencies: ['framer-motion@10.16.15'],
     devDependencies: [],
   },
+  supabase: {
+    dependencies: ['@supabase/supabase-js@2.39.0'],
+    devDependencies: [],
+  },
 };
 
 export default dependencies;

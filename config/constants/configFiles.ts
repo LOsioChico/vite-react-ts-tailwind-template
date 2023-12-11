@@ -33,6 +33,16 @@ const configFiles: Configfiles = {
     files: [],
     folders: [],
   },
+  supabase: {
+    files: [],
+    folders: [
+      {
+        name: 'supabase services template',
+        input: path.join(inputBasePath, 'supabase/services'),
+        output: path.join(outputBasePath, 'services'),
+      },
+    ],
+  },
 };
 
 export default configFiles;

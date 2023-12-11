@@ -3,6 +3,7 @@ import type Feature from '../types/feature.ts';
 import updateFileContent from '../utils/updateFileContent.ts';
 import modifyTsConfig from '../utils/modifyTsConfig.ts';
 import asyncExec from '../utils/asyncExec.ts';
+import fs from 'fs/promises';
 
 const filesFeatureChanges: FilesFeatureChanges = {
   vitest: async () => {
@@ -81,6 +82,13 @@ const filesFeatureChanges: FilesFeatureChanges = {
   zustand: async () => {},
   reactIcons: async () => {},
   framerMotion: async () => {},
+  supabase: async () => {
+    // Modify .env.template if not exists, create it
+    await fs.appendFile(
+      './.env.template',
+      '# Supabase\nVITE_SUPABASE_URL=\nVITE_SUPABASE_ANON_KEY=\n',
+    );
+  },
 };
 
 type FilesFeatureChanges = {

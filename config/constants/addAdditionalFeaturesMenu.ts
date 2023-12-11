@@ -21,6 +21,11 @@ const addAdditionalFeaturesMenu: AddAdditionalFeaturesMenu = [
     label: 'Framer Motion',
     hint: 'A production-ready motion library for React',
   },
+  {
+    value: 'supabase',
+    label: 'Supabase',
+    hint: 'Open source Firebase alternative',
+  },
 ];
 
 type AddAdditionalFeaturesMenu = Array<{
