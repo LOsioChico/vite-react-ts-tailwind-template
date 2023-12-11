@@ -35,14 +35,14 @@ const modifyTsConfig = async ({
 interface RemoveAction {
   target: 'compilerOptions' | 'include' | 'exclude';
   fieldName: string;
-  action: 'remove' | 'add';
+  action: 'remove';
 }
 
 interface AddAction {
   target: 'compilerOptions' | 'include' | 'exclude';
   fieldName: string;
   fieldValue: string;
-  action: 'remove' | 'add';
+  action: 'add';
 }
 
 type ModifyTsConfig = RemoveAction | AddAction;
