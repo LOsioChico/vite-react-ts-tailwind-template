@@ -10,6 +10,9 @@ This template has been configured with all of the tools required to create a **R
 
 ## Technologies
 
+> [!NOTE]
+> This project uses [pnpm](https://pnpm.io) as the package manager.
+
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
@@ -20,12 +23,14 @@ This template has been configured with all of the tools required to create a **R
 
 ### Setup
 
+> [!IMPORTANT]
+> The `postinstall` script will run automatically after the installation is complete, with a menu to add the features you want to use and configure the project (**warning:** the `config` folder will be removed after the `postinstall`)
+
 1. `git clone https://github.com/LOsioChico/vite-react-ts-tailwind-template.git`
 2. Modify the `package.json` file to use your project name, description, etc.
 3. Run `pnpm install` to install all of the project's dependencies
-4. After the installation is complete, the `postinstall` script will run automatically with a menu to add the features you want to use and configure the project (**warning:** the `config` folder will be removed after this step)
-5. Build the project for production: `pnpm build`
-6. Run the local development server: `pnpm dev`
+4. Build the project for production: `pnpm build`
+5. Run the local development server: `pnpm dev`
 
 ### Dev Loop
 
