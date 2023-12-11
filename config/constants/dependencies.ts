@@ -27,6 +27,13 @@ const dependencies: Dependencies = {
     dependencies: ['@supabase/supabase-js@2.39.0'],
     devDependencies: [],
   },
+  reactQuery: {
+    dependencies: ['@tanstack/react-query@5.13.4'],
+    devDependencies: [
+      '@tanstack/eslint-plugin-query@5.12.1',
+      '@tanstack/react-query-devtools@5.13.5',
+    ],
+  },
 };
 
 export default dependencies;

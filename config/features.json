@@ -3,5 +3,6 @@
   "zustand": false,
   "reactIcons": false,
   "framerMotion": false,
-  "supabase": false
+  "supabase": false,
+  "reactQuery": false
 }

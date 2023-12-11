@@ -43,6 +43,16 @@ const configFiles: Configfiles = {
       },
     ],
   },
+  reactQuery: {
+    files: [],
+    folders: [
+      {
+        name: 'react query provider template',
+        input: path.join(inputBasePath, 'reactQuery/providers'),
+        output: path.join(outputBasePath, 'providers'),
+      },
+    ],
+  },
 };
 
 export default configFiles;

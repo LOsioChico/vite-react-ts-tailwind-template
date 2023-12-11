@@ -26,6 +26,11 @@ const addAdditionalFeaturesMenu: AddAdditionalFeaturesMenu = [
     label: 'Supabase',
     hint: 'Open source Firebase alternative',
   },
+  {
+    value: 'reactQuery',
+    label: 'React Query',
+    hint: 'Hooks for fetching, caching and updating asynchronous data in React',
+  },
 ];
 
 type AddAdditionalFeaturesMenu = Array<{

@@ -3,6 +3,7 @@ import type Feature from '../types/feature.ts';
 import updateFileContent from '../utils/updateFileContent.ts';
 import modifyTsConfig from '../utils/modifyTsConfig.ts';
 import asyncExec from '../utils/asyncExec.ts';
+import modifyEslintrc from '../utils/modifyEslintrc.ts';
 import fs from 'fs/promises';
 
 const filesFeatureChanges: FilesFeatureChanges = {
@@ -88,6 +89,43 @@ const filesFeatureChanges: FilesFeatureChanges = {
       './.env.template',
       '# Supabase\nVITE_SUPABASE_URL=\nVITE_SUPABASE_ANON_KEY=\n',
     );
+  },
+  reactQuery: async () => {
+    // Modify .eslintrc.json
+    await modifyEslintrc({
+      target: 'extends',
+      fieldValue: 'plugin:@tanstack/eslint-plugin-query/recommended',
+      action: 'add',
+    });
+
+    await modifyEslintrc({
+      target: 'plugins',
+      fieldValue: '@tanstack/query',
+      action: 'add',
+    });
+
+    // Modify main.tsx
+    await updateFileContent('./src/main.tsx', (file) => {
+      const importText = `import QueryProvider from './providers/QueryProvider.tsx';`;
+
+      // if text is already there, don't add it again
+      if (file.includes(importText)) {
+        return file;
+      }
+
+      const newFile = file.replace(
+        `import AppRoutes from './routes/index.tsx';`,
+        `import AppRoutes from './routes/index.tsx';\n${importText}`,
+      );
+
+      return newFile.replace(
+        `<AppRoutes />`,
+        `<QueryProvider><AppRoutes /></QueryProvider>`,
+      );
+    });
+
+    // Format main.tsx
+    await asyncExec('prettier --config ./.prettierrc --write src/main.tsx');
   },
 };
 
