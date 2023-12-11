@@ -92,7 +92,10 @@ This template has been configured with all of the tools required to create a **R
 - [✅] Add `Vitest` for testing
 - [✅] Add `React Icons` for icons
 - [✅] Add `Framer Motion` for animations
+- [🔜] Add `React Query` for data fetching
+- [🔜] Add `Supabase` for backend
 - [🔜] Add an CLI gif animation to the README (Example of how to initialize the project)
+- [🔜] Add folder structure to the README with variations of additional features
 
 ## Contributing
 
