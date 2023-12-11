@@ -64,6 +64,8 @@ This template has been configured with all of the tools required to create a **R
 - 🧪 [Vitest](https://vitest.dev/) - Next Generation Testing Framework
 - 🖼️ [React Icons](https://react-icons.github.io/react-icons/) - Include popular icons in your React projects easily
 - 🎬 [Framer Motion](https://www.framer.com/motion/) - A production-ready motion library for React
+- 🗃️ [Supabase](https://supabase.io/) - The open source Firebase alternative
+- 🔄 [React Query](https://react-query.tanstack.com/) - Performant and powerful data synchronization for React
 
 ## Recommended IDE Setup
 
